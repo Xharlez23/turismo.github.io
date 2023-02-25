@@ -2,22 +2,82 @@
 Main page styles
 ========================================================================== */
 
-.hipster {
-  display: inline-block;
-  width: 347px;
-  height: 497px;
-  background: url('../../content/images/jhipster_family_member_3.svg') no-repeat center top;
-  background-size: contain;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* wait autoprefixer update to allow simple generation of high pixel density media query */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-  .hipster {
-    background: url('../../content/images/jhipster_family_member_3.svg') no-repeat center top;
-    background-size: contain;
+.contenido-busqueda {
+  width: 50%;
+  height: 59.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+
+  input[type='search'] {
+    font-size: 14px;
+    font-weight: 300;
+    color: #566573;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  input[type='search']::placeholder {
+    font-weight: 300;
+    color: #566573;
+  }
+
+  .titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: #839192;
+  }
+
+  .form-control {
+    border: 1px solid #eaecee;
+  }
+
+  .input-group-text {
+    background-color: #eaecee;
+    color: #566573;
+  }
+
+  .form-control:focus {
+    outline: none;
+    background-color: #fff;
+  }
+
+  .tags {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      font-weight: 300;
+      color: #000;
+    }
+
+    .tags-button {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      font-size: 12px;
+      border-radius: 40px;
+      border: 1px solid #eaecee;
+      background-color: #fff;
+      color: #566573;
+    }
+
+    .tags-button:hover {
+      background-color: #eaecee;
+    }
   }
 }

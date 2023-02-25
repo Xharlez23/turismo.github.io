@@ -1,78 +1,34 @@
 <div class="row">
-  <div class="col-md-3">
-    <span class="hipster img-fluid rounded"></span>
-  </div>
-
-  <div class="col-md-9">
-    <h1 class="display-4"><span jhiTranslate="home.title">¡Bienvenido, Java Hipster!</span> (Turismo)</h1>
-
-    <p class="lead" jhiTranslate="home.subtitle">Esta es su página de inicio</p>
-
-    <div [ngSwitch]="account !== null">
-      <div class="alert alert-success" *ngSwitchCase="true">
-        <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message" [translateValues]="{ username: account.login }"
-          >Está conectado como "{{ account.login }}".</span
-        >
-      </div>
-
-      <div class="alert alert-warning" *ngSwitchCase="false">
-        <span jhiTranslate="global.messages.info.authenticated.prefix">Si desea </span>
-        <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">iniciar sesión</a
-        ><span jhiTranslate="global.messages.info.authenticated.suffix"
-          >, puede intentar con las cuentas predeterminadas:<br />- Administrador (usuario="admin" y contraseña="admin") <br />- Usuario
-          (usuario="user" y contraseña="user").</span
-        >
-      </div>
-
-      <div class="alert alert-warning" *ngSwitchCase="false">
-        <span jhiTranslate="global.messages.info.register.noaccount">¿Aún no tienes una cuenta?</span>&nbsp;
-        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Crea una cuenta</a>
-      </div>
+  <div class="contenido-busqueda">
+    <div class="col-md-12">
+      <h1 class="titulo">¿Qúe hay pa' hacer?</h1>
+      <form action="" method="get">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="input-group mb-3">
+              <input
+                type="search"
+                class="form-control form-control-lg"
+                placeholder="Buscar destinos turisticos..."
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+              <span class="input-group-text" id="basic-addon2"><fa-icon icon="search"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+        <div class="tags">
+          <a href="?agua"><span class="tags-button">Agua</span></a>
+          <a href="?aire-libre"> <span class="tags-button">Aire libre</span></a>
+          <a href="?cultura"><span class="tags-button">Cultura</span></a>
+          <a href="?deportes"><span class="tags-button">Deportes</span></a>
+          <a href="?comida"><span class="tags-button">Comida</span></a>
+          <a href="?relajacion"><span class="tags-button">Relajación</span></a>
+          <a href="?tecnologia"><span class="tags-button">Tecnologia</span></a>
+          <a href="?monumentos"><span class="tags-button">Monumentos</span></a>
+          <a href="?religioso"><span class="tags-button">Religioso</span></a>
+        </div>
+      </form>
     </div>
-
-    <p jhiTranslate="home.question">Si tiene preguntas sobre JHipster:</p>
-
-    <ul>
-      <li>
-        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage"
-          >Página de inicio de JHipster</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/tags/jhipster/info"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.stackoverflow"
-          >JHipster en Stack Overflow</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.bugtracker"
-          >JHipster seguimiento de errores</a
-        >
-      </li>
-      <li>
-        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat"
-          >Sala de chat pública de JHipster</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow"
-          >contacto @jhipster en Twitter</a
-        >
-      </li>
-    </ul>
-
-    <p>
-      <span jhiTranslate="home.like">Si te gusta JHipster, danos una estrella en</span>
-      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github"
-        >GitHub</a
-      >!
-    </p>
   </div>
 </div>
