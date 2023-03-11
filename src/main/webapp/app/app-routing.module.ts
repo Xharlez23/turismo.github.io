@@ -29,6 +29,14 @@ import { UserRouteAccessService } from 'app/core/auth/user-route-access.service'
           loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
         },
         {
+          path: 'formulario',
+          loadChildren: () => import('./formulario/formulario.module').then(m => m.FormularioModule),
+        },
+        {
+          path: 'destinos',
+          loadChildren: () => import('./destinos/destinos.module').then(m => m.DestinosModule),
+        },
+        {
           path: '',
           loadChildren: () => import(`./entities/entity-routing.module`).then(m => m.EntityRoutingModule),
         },

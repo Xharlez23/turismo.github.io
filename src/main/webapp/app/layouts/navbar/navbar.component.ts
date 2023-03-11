@@ -63,6 +63,9 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  formulario(): void {
+    this.router.navigate(['/formulario']);
+  }
   logout(): void {
     this.collapseNavbar();
     this.loginService.logout();
